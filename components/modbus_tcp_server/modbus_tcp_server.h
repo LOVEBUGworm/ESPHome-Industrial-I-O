@@ -40,8 +40,8 @@ class ModbusTCPServer : public Component {
   uint16_t port_{502};
   uint8_t unit_id_{1};
 
-  // Coils 0–10 (11 total)
-  static const uint16_t MAX_COILS = 11;
+  // Coils 0–11 (12 total)
+  static const uint16_t MAX_COILS = 12;
 
   bool coils_[MAX_COILS]{};
   binary_sensor::BinarySensor *coil_sensors_[MAX_COILS]{};
