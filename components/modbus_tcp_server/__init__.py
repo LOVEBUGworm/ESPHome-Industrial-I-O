@@ -12,7 +12,7 @@ modbus_tcp_server_ns = cg.esphome_ns.namespace("modbus_tcp_server")
 ModbusTCPServer = modbus_tcp_server_ns.class_("ModbusTCPServer", cg.Component)
 
 COIL_SCHEMA = cv.Schema({
-    cv.Required(CONF_ADDRESS): cv.int_range(min=0, max=10),  # 0–10 inclusive
+    cv.Required(CONF_ADDRESS): cv.int_range(min=0, max=11),  # 0–11 inclusive
     cv.Optional(CONF_BINARY_SENSOR): cv.use_id(binary_sensor.BinarySensor),
     cv.Optional(CONF_SWITCH): cv.use_id(switch.Switch),
 }).add_extra(
